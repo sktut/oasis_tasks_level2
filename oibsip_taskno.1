@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <form>
+          <div class="result"><input type="text" name="display" /></div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              onclick="display.value= '' "
+              class="operator"
+            />
+            <input
+              type="button"
+              value="DE"
+              onclick="display.value=display.value.toString().slice(0,-1)"
+              class="operator"
+            />
+            <input
+              type="button"
+              value="."
+              onclick="display.value+= '.' "
+              class="operator"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="display.value+= '/' "
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="7" onclick="display.value+= '7' " />
+            <input type="button" value="8" onclick="display.value+= '8' " />
+            <input type="button" value="9" onclick="display.value+= '9' " />
+            <input
+              type="button"
+              value="*"
+              onclick="display.value+= '*' "
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="4" onclick="display.value+= '4' " />
+            <input type="button" value="5" onclick="display.value+= '5' " />
+            <input type="button" value="6" onclick="display.value+= '6' " />
+            <input
+              type="button"
+              value="-"
+              onclick="display.value+= '-' "
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="1" onclick="display.value+= '1' " />
+            <input type="button" value="2" onclick="display.value+= '2' " />
+            <input type="button" value="3" onclick="display.value+= '3' " />
+            <input
+              type="button"
+              value="+"
+              onclick="display.value+= '+' "
+              class="operator"
+            />
+          </div>
+          <div>
+            <input type="button" value="00" onclick="display.value+= '00' " />
+            <input type="button" value="0" onclick="display.value+= '0' " />
+            <input
+              type="button"
+              value="="
+              onclick="display.value=eval(display.value) "
+              class="equaloperator"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("https://i.pinimg.com/564x/c3/a2/42/c3a242a2aa54eb253c5ceb0b7ddb6147.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.container {
+  padding-top: 50px;
+  padding-right: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.main {
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  border: 10px;
+}
+.main form input {
+  border: 4px;
+  outline: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: black;
+  font-size: 25px;
+  cursor: pointer;
+}
+.main form input:hover {
+  background-image: url("https://i.pinimg.com/564x/60/66/e1/6066e1ccda48e8279bcd8d152434dd72.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+  border-style: dashed;
+  border-width: 2px;
+  font-size: 30px;
+}
+form .result {
+  width: 250px;
+}
+form .result input {
+  text-align: right;
+  font-size: 35px;
+  box-shadow: none;
+  width: 415px;
+}
+form .result input:hover {
+  background-image: url("https://i.pinimg.com/564x/1e/b0/9d/1eb09d6db44da0605d4408ac26e9cae0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #c70039;
+  font-size: 40px;
+  text-align: center;
+  border-style: none;
+}
+form input.equaloperator {
+  width: 205px;
+}
+form input.equaloperator:hover {
+  background-image: url("https://i.pinimg.com/564x/4f/03/81/4f0381ebb135cf600fb6378f988f7800.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: black;
+}
